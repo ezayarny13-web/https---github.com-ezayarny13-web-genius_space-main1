@@ -1,0 +1,337 @@
+/* button:focus {
+ background-color: blue; колір на кнопку через ТАБ!
+} */
+/* button:active {
+  background-color: blue; клік на кнопку (зміна кольору)
+} */
+/* text-transform: capitalize ; кожне слово з великої літери */
+/* text-shadow: 2px 2px 2px black; фон на тексті */
+/* letter-spacing: 4px; відстань між літерами */
+/* word-spacing: 4px; відстань між словами */
+/* font-style: italic; текст за курсивом */
+
+/* BASE */
+@font-face {
+  font-display: swap;
+  font-family: 'Poppins';
+  font-weight: 300;
+  src: url('../fonts/poppins-v24-latin-300.woff2') format('woff2'),
+    url('../fonts/poppins-v24-latin-300.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Poppins';
+  font-weight: 400;
+  src: url('../fonts/poppins-v24-latin-regular.woff2') format('woff2'),
+    url('../fonts/poppins-v24-latin-regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Poppins';
+  font-weight: 600;
+  src: url('../fonts/poppins-v24-latin-600.woff2') format('woff2'),
+    url('../fonts/poppins-v24-latin-600.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Poppins';
+  font-weight: 900;
+  src: url('../fonts/poppins-v24-latin-900.woff2') format('woff2'),
+    url('../fonts/poppins-v24-latin-900.ttf') format('truetype');
+}
+
+:root {
+  /* root - це контейнер туди можна покласти все що завгодно */
+  --color-primery-dark: #31261a;
+  --color-primery-light: #faf4ea;
+  --color-brand-dark: #465929;
+  --color-brand-normal: #819b57;
+  --color-brand-light: #cfcfbc;
+}
+
+body {
+  color: var(--color-primery-dark);
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+ul {
+  list-style-type: none; /* на переліку зникають кружечки переліку */
+  padding: 0;
+  margin: 0;
+}
+
+address {
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.section {
+  padding: 48px 0;
+}
+
+.conteiner-width {
+  width: 100%;
+  max-width: 1288px;
+  margin: 0 auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+}
+/* BASE!last! */
+
+/* button */
+button {
+  padding: 16px 32px;
+  color: var(--color-primery-light);
+  font-weight: 600;
+  background-color: var(--color-brand-normal);
+  border: 2px solid var(--color-brand-normal);
+  border-radius: 8px;
+  cursor: pointer; /* курсор */
+}
+
+button:hover {
+  /* background-color: blue; */
+  color: var(--color-brand-normal);
+  background-color: transparent; /* прозрачный фон */
+}
+
+/* link */
+.link {
+  color: var(--color-primery-light);
+  text-decoration: none; /* підкреслювання викл */
+}
+.link:hover {
+  background-color: var(--color-brand-normal);
+  text-decoration: none; /* підкреслювання вкл underline */
+  /* font-weight: 600; збільшення при наведенні на елемент */
+}
+.footer-link {
+  color: var(--color-primery-light);
+  text-decoration: none;
+}
+
+/* header */
+.header {
+  background-color: gray;
+}
+
+.header-container {
+  gap: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.header-nav {
+  gap: 40px;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+.header-menu {
+  display: flex;
+  gap: 64px;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+/* hero section */
+.hero-section {
+  padding: 272px 0;
+  background-image: url(../images/couple-in-backery.jpg);
+  background-repeat: no-repeat;
+  background-position: center top; /*зберігає пропорції фото*/
+  /* background-size: contain; */
+  background-size: cover; /* розтягує по блоку пропорції фото */
+  /* background-attachment: fixed; закріплення фото */
+}
+.hero-title {
+  margin-bottom: 0;
+  color: var(--color-primery-light);
+  text-align: center;
+  font-weight: 900;
+}
+.hero-title .accent {
+  color: var(--color-brand-normal); /* hex value */
+}
+
+/* advantages */
+.advantages-section {
+  padding: 16px 0;
+  background-color: var(--color-brand-normal);
+}
+
+.advantages-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  /* padding: 48px 0; */
+}
+
+.advantages-item {
+  color: var(--color-primery-light);
+  font-size: 20px;
+  font-weight: 300;
+}
+
+/* section */
+
+.section-title {
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 1.3;
+}
+
+.section-title.centered {
+  text-align: center;
+}
+
+.section-title .accent {
+  color: var(--color-brand-dark);
+}
+
+/* tradition */
+.tradition-content {
+  max-width: 710px;
+}
+
+.tradition-conteiner {
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.tradition-title {
+  margin-bottom: 42px;
+}
+
+.tradition-section {
+  padding-top: 96px;
+}
+
+.tradition-text .brand-uppercase {
+  text-transform: uppercase;
+  color: var(--color-brand-normal);
+  font-weight: 600;
+}
+
+.tradition-text .brand {
+  color: var(--color-brand-normal);
+}
+
+.tradition-text.limited {
+  max-width: 340px;
+}
+
+/* cookers */
+.cooker-title {
+  max-width: 520px;
+  margin: 0 auto 80px;
+}
+
+.cooker-title::before,
+.cooker-title::after {
+  display: block;
+  width: 352px;
+  border: 2px solid var(--color-brand-light);
+  content: '';
+}
+
+.cookers-title {
+  margin-bottom: 16px;
+  font-weight: 600;
+  font-size: 40px;
+}
+
+/* format */
+.formats-item {
+  flex-basis: calc((100% - 40px) / 3);
+}
+
+.formats-list {
+  flex-wrap: wrap;
+  display: flex;
+  gap: 20px;
+}
+
+.format-card {
+  border: 1px solid rebeccapurple;
+  background-image: linear-gradient(
+    180deg,
+    rgba(49, 38, 26, 0) 55.21%,
+    rgba(49, 38, 26, 0.71) 72.92%,
+    var(--color-primery-dark)
+  );
+  border-radius: 16px;
+  padding: 24px;
+  height: 444px;
+}
+
+.formats-title {
+  margin-bottom: 80px;
+}
+
+.format-title {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.format-text {
+  font-weight: 300;
+  font-size: 14px;
+}
+
+/* contact */
+.form-text {
+  color: var(--color-brand-dark);
+}
+.contact-title {
+  margin-bottom: 16px;
+}
+/* footer */
+.footer {
+  background-color: var(--color-primery-dark);
+  background-image: url(../images/background-footer.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* adress */
+.address-link {
+  font-weight: 300;
+  font-size: 16px;
+  color: var(--color-primery-light);
+  text-decoration: none;
+}
+
+.footer-copyright {
+  color: #a18268;
+  font-size: 14px;
+}
