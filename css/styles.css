@@ -316,6 +316,19 @@ button:hover {
   font-size: 14px;
 }
 
+/* format carousel */
+.cerouser-buttom {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid var(--color-primery-dark);
+}
+
+.cerouser-arrow {
+  fill: var(--color-primery-dark);
+}
+
 /* contact */
 .form-text {
   color: var(--color-brand-dark);
@@ -332,7 +345,11 @@ button:hover {
   background-position: center;
 }
 
-/* adress */
+.footer-copyright {
+  color: #a18268;
+  font-size: 14px;
+}
+
 .address-link {
   font-weight: 300;
   font-size: 16px;
@@ -340,7 +357,7 @@ button:hover {
   text-decoration: none;
 }
 
-.footer-copyright {
-  color: #a18268;
-  font-size: 14px;
+.adress-icon {
+  fill: var(--color-primery-light); /*fill це завивка*/
+  /* stroke: red; обводка */
 }
