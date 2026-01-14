@@ -51,7 +51,6 @@
   --color-brand-dark: #465929;
   --color-brand-normal: #819b57;
   --color-brand-light: #cfcfbc;
-  /* #A18268 */
 }
 
 body {
@@ -269,6 +268,20 @@ button:hover {
   content: '';
 }
 
+.cookers-list {
+  display: flex;
+  gap: 30px;
+}
+
+.cookers-item {
+  flex-basis: calc((100% - 30px) / 2);
+}
+
+.cookers-card {
+  display: flex;
+  gap: 30px;
+}
+
 .cooker-image {
   border-radius: 4px 4px 4px 200px;
   box-shadow: -16px 16px 0 0 var(--color-primery-light),
@@ -290,6 +303,12 @@ button:hover {
   flex-wrap: wrap;
   display: flex;
   gap: 20px;
+}
+
+.formats-conteiner {
+  display: flex;
+  align-items: center;
+  gap: 32px;
 }
 
 .format-card {
@@ -324,6 +343,7 @@ button:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0; /* при умовах не стискається */
   width: 44px;
   height: 44px;
   padding: 0;
@@ -344,13 +364,54 @@ button:hover {
 } */
 
 /* contact */
+.contact-section {
+  padding-bottom: 96px;
+}
+
+.contact-container {
+  display: flex;
+
+  gap: 32px;
+}
+
+.contact-map {
+  flex-shrink: 0;
+  border: none;
+  border-radius: 16px;
+}
+
 .form-text {
   color: var(--color-brand-dark);
 }
 .contact-title {
   margin-bottom: 16px;
 }
+
 /* footer */
+.footer-container {
+  display: flex;
+}
+.footer-nav,
+.footer-adress {
+  display: flex;
+  flex-basis: 50%;
+}
+
+.footer-menu,
+.footer-logo {
+  flex-grow: 1;
+}
+
+.address-list,
+.adress-info {
+  flex-grow: 1;
+}
+
+.address-copyright {
+  color: #a18268;
+  font-size: 14px;
+}
+
 .footer {
   background-color: var(--color-primery-dark);
   background-image: url(../images/background-footer.png);
@@ -359,12 +420,8 @@ button:hover {
   background-position: center;
 }
 
-.footer-copyright {
-  color: #a18268;
-  font-size: 14px;
-}
-
 .address-link {
+  flex-grow: 1;
   font-weight: 300;
   font-size: 16px;
   color: var(--color-primery-light);
