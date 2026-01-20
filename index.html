@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="uk">
   <head>
     <meta charset="UTF-8" />
@@ -32,7 +32,7 @@
               <li><a class="link" href="#contact-section">Контакти</a></li>
             </ul>
           </nav>
-          <button type="button">Замовити дзвінок</button>
+          <button type="button modal-btn-open">Замовити дзвінок</button>
         </div>
       </div>
     </header>
@@ -82,7 +82,8 @@
       <section class="section" id="cookers-section">
         <div class="conteiner-width">
           <h2 class="cooker-title section-title centered">
-            Наші найкращі <span class="accent">шеф - кухарі</span>
+            Наші найкращі <br />
+            <span class="accent">шеф - кухарі</span>
           </h2>
           <ul class="cookers-list">
             <li class="cookers-item">
@@ -93,16 +94,18 @@
                   alt="Дівчина з посмішкою тримає круасан"
                 />
                 <div class="div">
-                  <h3 class="cookers-title">Настя</h3>
-                  <p class="cookers-text">Привіт, я Настя!</p>
-                  <p class="cookers-text">
-                    Вже 10 років, я свтілюю <br />
-                    у життя цікаві та смачні ідеї.
-                  </p>
-                  <p class="cookers-text">
-                    Я випічу для вас <br />
-                    найсмачніщі вироби!
-                  </p>
+                  <div class="cookers-text">
+                    <h3 class="cookers-title">Настя</h3>
+                    <p>Привіт, я Настя!</p>
+                    <p>
+                      Вже 10 років, я свтілюю <br />
+                      у життя цікаві та смачні ідеї.
+                    </p>
+                    <p>
+                      Я випічу для вас <br />
+                      найсмачніщі вироби!
+                    </p>
+                  </div>
                 </div>
               </article>
             </li>
@@ -222,9 +225,11 @@
       <div class="conteiner-width">
         <div class="footer-container">
           <nav class="footer-nav">
-            <a class="footer-logo" href="#">
-              <img src="./images/logo.svg" alt="Логотип сучасної пекарні" />
-            </a>
+            <div class="footer-logo">
+              <a href="#">
+                <img src="./images/logo.svg" alt="Логотип сучасної пекарні" />
+              </a>
+            </div>
             <ul class="footer-menu">
               <li>
                 <a class="footer-link" href="#tradition-section"
@@ -287,5 +292,13 @@
         </div>
       </div>
     </footer>
+
+    <div class="backdrop">
+      <div class="modal">
+        <button class="modal-btn-close" type="button">Close</button>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
