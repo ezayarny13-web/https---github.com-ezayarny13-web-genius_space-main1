@@ -505,7 +505,9 @@ p {
   justify-content: center;
 }
 .backdrop.is-hidden {
-  display: none;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
 }
 .modal {
   position: relative;
