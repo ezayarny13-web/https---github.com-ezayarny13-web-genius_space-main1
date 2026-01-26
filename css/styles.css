@@ -494,6 +494,7 @@ p {
 /* modal */
 .backdrop {
   position: fixed;
+  padding: 24px;
   top: 0;
   left: 0;
   right: 0;
