@@ -504,7 +504,7 @@ p {
   align-items: center;
   justify-content: center;
 }
-.backdrop .is-hidden {
+.backdrop.is-hidden {
   display: none;
 }
 .modal {
