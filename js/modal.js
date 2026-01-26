@@ -4,5 +4,5 @@ const modalBtnClose = document.querySelector('modal-btn-close');
 
 const toggleModal = () => modal.classList.toggle('is-hidden');
 
-modalButtonOpen.addEventListener('click', toggleModal);
-modalButtonClose.addEventListener('click', toggleModal);
+modalBtnOpen.addEventListener('click', toggleModal);
+modalBtnClose.addEventListener('click', toggleModal);
